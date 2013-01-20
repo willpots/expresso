@@ -5,6 +5,12 @@
 	</div>
 
 	<div id="sign-up">
-		<input type="text" placeholder="email" autofocus="true">
+		<h1>email</h1>
+		<%= form_tag("/validate", :method => "post") do %>
+
+		<%= text_field_tag :email  %>
+
+		<input type="submit">
+		<% end %>
 	</div>
 </div>

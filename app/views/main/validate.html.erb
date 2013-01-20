@@ -1,0 +1,16 @@
+<div id="container">
+	<div id="logo-container">
+		
+		<img src="assets/msblack.jpeg" alt="Mister Salsa Man">
+	</div>
+
+	<div id="sign-up">
+		<h1><%= @email %></h1>
+		<% if @customer.empty? %>
+		<h1>You are not a member!</h1>
+		<p>Would you like to sign up?</p>
+		<% else %>
+		<h1>You are a member!</h1>
+		<% end %>
+	</div>
+</div>

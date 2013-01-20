@@ -1,6 +1,7 @@
 Msm::Application.routes.draw do
   get "main/home"
 
+  match "validate" => "main#validate"
 
   root :to => 'main#home'
   # The priority is based upon order of creation:
