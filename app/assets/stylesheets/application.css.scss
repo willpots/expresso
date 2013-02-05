@@ -14,6 +14,8 @@
 
 html {
 	background:black;
+	color: #fff;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
 	#logo-container {
 		text-align: center;
 		padding: 40px;
@@ -42,6 +44,19 @@ html {
 			background:black;
 			&:focus {
 				outline: none;
+			}
+		}
+		input[type=submit] {
+			border:2pt solid white;
+			border-radius: 10px;
+			background: black;
+			color:white;
+			padding: 10px;
+			font-size: 20px;
+			cursor: pointer;
+			&:hover {
+				background:white;
+				color:black;
 			}
 		}
 	}

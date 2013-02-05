@@ -1,6 +1,12 @@
 Msm::Application.routes.draw do
-  get "main/home"
+  resources :orders
 
+  resources :products
+
+  resources :people
+
+  get "main/home"
+  get "order" => "main#order"
   match "validate" => "main#validate"
 
   root :to => 'main#home'
