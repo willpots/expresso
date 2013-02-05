@@ -1,6 +1,6 @@
 <h1>Listing orders</h1>
 
-<table>
+<table cellpadding="5">
   <tr>
     <th>Person</th>
     <th>Product</th>
@@ -17,9 +17,8 @@
     <td><a href="/products/<%= order.product.id %>"><%= order.product.name %></a></td>
     <td><%= order.location %></td>
     <td><%= order.payment %></td>
-    <td><%= link_to 'Show', order %></td>
     <td><%= link_to 'Edit', edit_order_path(order) %></td>
-    <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Delete', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
