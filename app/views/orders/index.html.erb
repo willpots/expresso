@@ -13,8 +13,8 @@
 
 <% @orders.each do |order| %>
   <tr>
-    <td><%= order.person %></td>
-    <td><%= order.product %></td>
+    <td><a href="/people/<%= order.person.id %>"><%= order.person.name %></a></td>
+    <td><a href="/products/<%= order.product.id %>"><%= order.product.name %></a></td>
     <td><%= order.location %></td>
     <td><%= order.payment %></td>
     <td><%= link_to 'Show', order %></td>

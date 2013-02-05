@@ -2,7 +2,7 @@
 
 <p>
   <b>Person:</b>
-  <%= @order.person.name %>
+  <a href="/people/<%= @order.person.id %>"><%= @order.person.name %></a>
 </p>
 
 <p>
@@ -18,6 +18,11 @@
 <p>
   <b>Payment:</b>
   <%= @order.payment %>
+</p>
+
+<p>
+  <b>Ordered at</b>
+  <%= @order.created_at.to_time.strftime( "%m/%d/%Y at %I:%M%p") %>
 </p>
 
 
