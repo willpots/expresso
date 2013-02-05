@@ -16,7 +16,11 @@
   <%= f.hidden_field :person_id, :value => @person.id.to_s %>
   <div class="field">
     <%= f.label :product_id, "What would you like to order?" %><br />
-    <%= select_tag :product_id, options_from_collection_for_select(@products, "id", "name") %>
+    <select name="order[product_id]" data-placeholder="Choose a product" class="chzn-select" style="width:250px;">
+      <% @products.each do |p| %>
+        <option value="<%= p.id %>"><%= p.name %> - $<%= p.price %></option>
+      <% end %>
+    </select>
   </div>
   <div class="field">
     <%= f.label :location, "Where should we drop this off?" %><br />
@@ -24,7 +28,11 @@
   </div>
   <div class="field">
     <%= f.label :payment %><br />
-    <%= f.text_field :payment %>
+    <select name="order[payment]" data-placeholder="Choose a form of payment" class="chzn-select" style="width:250px;">
+        <option value="Cash">Cash</option>
+
+    </select>
+
   </div>
   <div class="actions">
     <%= f.submit %>

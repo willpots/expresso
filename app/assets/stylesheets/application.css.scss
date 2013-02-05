@@ -8,60 +8,66 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *
  *= require_self
  *= require_tree .
  */
+@import "bootstrap";
 
 html {
-	background:black;
-	color: #fff;
-	font-family: "Helvetica Neue", Helvetica, sans-serif;
-	#logo-container {
-		text-align: center;
-		padding: 40px;
-	}
-	#sign-up {
-		text-align: center;
-		padding: 20px;
-		color:white;
+	body {
+		background:black;
+		color: #fff;
 		font-family: "Helvetica Neue", Helvetica, sans-serif;
-		h1 {
-			font-family: "Helvetica Neue", Helvetica, sans-serif;
-			color: red;
-			padding:10px;
-			margin:0;
-			font-size: 18px;
-		}
-		input[type=text] {
+		#logo-container {
 			text-align: center;
-			border-radius: 10px;
-			width:300px;
-			font-size: 20px;
-			padding: 10px;
-			font-family: "Helvetica Neue", Helvetica, sans-serif;
-			border:2pt solid white;
-			color:white;
-			background:black;
-			&:focus {
-				outline: none;
-			}
+			padding: 40px;
 		}
-		input[type=submit] {
-			border:2pt solid white;
-			border-radius: 10px;
-			background: black;
+		#sign-up {
+			text-align: center;
+			padding: 20px;
 			color:white;
-			padding: 10px;
-			font-size: 20px;
-			cursor: pointer;
-			&:hover {
-				background:white;
-				color:black;
+			font-family: "Helvetica Neue", Helvetica, sans-serif;
+			h1 {
+				font-family: "Helvetica Neue", Helvetica, sans-serif;
+				color: red;
+				padding:10px;
+				margin:0;
+				font-size: 18px;
+			}
+			input[type=text] {
+				text-align: center;
+				border-radius: 10px;
+				width:300px;
+				font-size: 20px;
+				padding: 10px;
+				font-family: "Helvetica Neue", Helvetica, sans-serif;
+				border:2pt solid white;
+				color:white;
+				background:black;
+				&:focus {
+					outline: none;
+				}
+			}
+			input[type=submit] {
+				border:2pt solid white;
+				border-radius: 10px;
+				background: black;
+				color:white;
+				padding: 10px;
+				font-size: 20px;
+				cursor: pointer;
+				&:hover {
+					background:white;
+					color:black;
+				}
 			}
 		}
 	}
 }
-
+label {
+	display: inline;
+}
 input[placeholder], [placeholder], *[placeholder] {
 	color:white !important;
 }
