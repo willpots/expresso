@@ -1,4 +1,8 @@
 Msm::Application.routes.draw do
+  get "admin/index"
+
+  get "admin/validate"
+
   resources :orders
 
   resources :products

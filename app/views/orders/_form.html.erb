@@ -27,7 +27,7 @@
     <%= f.text_field :location %>
   </div>
   <div class="field">
-    <%= f.label :payment %><br />
+    <%= f.label :payment, "How would you like to pay?" %><br />
     <select name="order[payment]" data-placeholder="Choose a form of payment" class="chzn-select" style="width:250px;">
         <option value="Cash">Cash</option>
 
@@ -35,6 +35,6 @@
 
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Order", :class => "btn" %>
   </div>
 <% end %>
