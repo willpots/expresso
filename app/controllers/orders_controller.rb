@@ -24,12 +24,11 @@ class OrdersController < ApplicationController
   # GET /orders/new
   # GET /orders/new.json
   def new
+    # @open = Setting.find_by_key("open_now")
+    # if @open and @open.value == true
     @order = Order.new
-    
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @order }
-    end
+
+    # end
   end
 
   # GET /orders/1/edit

@@ -23,4 +23,8 @@ class MainController < ApplicationController
       redirect_to "/"
     end
   end
+
+  def admin
+
+  end
 end

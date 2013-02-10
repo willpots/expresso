@@ -1,7 +1,4 @@
 Msm::Application.routes.draw do
-  get "admin/index"
-
-  get "admin/validate"
 
   resources :orders
 
@@ -9,6 +6,7 @@ Msm::Application.routes.draw do
 
   resources :people
 
+  get "admin" => "main#admin"
   get "main/home"
   get "order" => "main#order"
   match "validate" => "main#validate"
