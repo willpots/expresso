@@ -11,9 +11,11 @@ class MainController < ApplicationController
       if @customer
         session[:email] = params[:email]
         session[:valid] = true
+        redirect_to "/orders/new"
+      else
+
       end
     end
-    redirect_to "/orders/new"
   end
 
   def order
