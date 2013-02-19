@@ -6,11 +6,7 @@
 
 	<div id="sign-up">
 		<h1><%= @email %></h1>
-		<% if @customer.empty? %>
 		<h1>You are not a member!</h1>
 		<p>Would you like to sign up? Email <a href="mailto:theburritosociety@gmail.com">theburritosociety@gmail.com</a></p>
-		<% else %>
-		<h1>You are a member!</h1>
-		<% end %>
 	</div>
 </div>
