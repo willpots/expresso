@@ -23,8 +23,12 @@
     </select>
   </div>
   <div class="field">
+    <%= f.label :quantity, "How many would you like?" %><br />
+    <%= f.number_field :quantity %>
+  </div>
+  <div class="field">
     <%= f.label :location, "When and where do you want your food?" %><br />
-    <%= f.text_field :location %>
+    <%= f.text_field :location, :placeholder => "ex. Hepburn 212 at 12:30am" %>
   </div>
   <div class="field">
     <%= f.label :payment, "How would you like to pay?" %><br />
@@ -35,12 +39,10 @@
     </select>
 
   </div>
-<!--   <div class="field">
-    <select name="order[served]" data-placeholder="Fulfilled?" class="chzn-select" style="width:250px;">
-        <option value="false" selected>Not Fullfilled</option>
-        <option value="true">Fullfilled</option>
-    </select>
-  </div> -->
+  <div class="field">
+    <%= f.label :allergies %><br />
+    <%= f.text_area :allergies, :placeholder => "Please list food allergies or other things we should know when making your food!" %>
+  </div>
   <div class="actions">
     <%= f.submit "Order", :class => "btn" %>
   </div>

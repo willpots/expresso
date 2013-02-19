@@ -20,7 +20,12 @@ p, ol, ul, td {
   line-height: 18px;
 }
 
-
+.red {
+    color:red;
+}
+.bottom-border {
+    border-bottom: 1pt solid red;
+}
 a {
   color: #fff;
   &:visited {
@@ -39,7 +44,10 @@ div {
 }
 
 #notice {
-  color: green;
+  color: red;
+  font-weight: bold;
+  font-size:16px;
+  padding:10px;
 }
 
 .field_with_errors {
@@ -121,6 +129,9 @@ html {
 					color:black;
 				}
 			}
+            input[placeholder], [placeholder], *[placeholder] {
+                color:white !important;
+            }
 		}
 		.container {
 			width:800px;
@@ -131,7 +142,4 @@ html {
 }
 label {
 	display: inline;
-}
-input[placeholder], [placeholder], *[placeholder] {
-	color:white !important;
 }

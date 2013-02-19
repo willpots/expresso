@@ -6,6 +6,8 @@
     <th>Product</th>
     <th>Location</th>
     <th>Payment</th>
+    <th>Quantity</th>
+    <th>Allergies</th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,6 +19,8 @@
     <td><a href="/products/<%= order.product.id %>"><%= order.product.name %></a></td>
     <td><%= order.location %></td>
     <td><%= order.payment %></td>
+    <td><%= order.quantity %></td>
+    <td><%= order.allergies %></td>
     <td><%= link_to 'Edit', edit_order_path(order) %></td>
     <td><%= link_to 'Delete', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
