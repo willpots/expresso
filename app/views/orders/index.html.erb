@@ -15,8 +15,16 @@
 
 <% @orders.each do |order| %>
   <tr>
-    <td><a href="/people/<%= order.person.id %>"><%= order.person.name %></a></td>
-    <td><a href="/products/<%= order.product.id %>"><%= order.product.name %></a></td>
+    <td>
+        <% if !order.person.nil? %>
+        <a href="/people/<%= order.person.id %>"><%= order.person.name %></a>
+        <% end %>
+    </td>
+    <td>
+        <% if !order.person.nil? %>
+            <a href="/products/<%= order.product.id %>"><%= order.product.name %></a>
+        <% end %>
+    </td>
     <td><%= order.location %></td>
     <td><%= order.payment %></td>
     <td><%= order.quantity %></td>
